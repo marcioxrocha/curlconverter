@@ -1,0 +1,3 @@
+test/fixtures/** linguist-generated
+test/fixtures/curl_commands/* -linguist-generated
+test/fixtures/curl_commands/* linguist-documentation
