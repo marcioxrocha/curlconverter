@@ -183,7 +183,10 @@ function escapeQueryValue(value: Word): Word {
   return value;
 }
 function urlencodedAsHttpie(flags: string[], items: string[], data: Word) {
-  const [queryList] = parseQueryString(data);
+  let queryList;
+  try {
+    [queryList] = parseQueryString(data);
+  } catch {}
   if (!queryList) {
     flags.push("--raw " + (repr(data) || "''"));
     return;
@@ -315,6 +318,8 @@ function requestToHttpie(
     !(request.dataArray[0] instanceof Word) &&
     !request.dataArray[0].name
   ) {
+    // TODO: surely --upload-file and this can't be identical,
+    // doesn't this ignore url encoding?
     items.push("@" + repr(request.dataArray[0].filename));
   } else if (request.data) {
     formatData(flags, items, request.data, request.headers);

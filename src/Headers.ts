@@ -187,7 +187,7 @@ export class Headers implements Iterable<[Word, Word | null]> {
   }
 
   // Gets the first header, matching case-insensitively
-  get(header: string): any | null | undefined {
+  get(header: string): Word | null | undefined {
     const lookup = header.toLowerCase();
     for (const [h, v] of this.headers) {
       if (h.toLowerCase().toString() === lookup) {
@@ -318,7 +318,7 @@ export function parseCookiesStrict(cookieString: Word): Cookies | null {
   return cookies;
 }
 
-export function parseCookies(cookieString: any): Cookies | null {
+export function parseCookies(cookieString: Word): Cookies | null {
   const cookies: Cookies = [];
   for (let cookie of cookieString.split(";")) {
     cookie = cookie.trim();

@@ -61,7 +61,7 @@ function requestToNodeRequest(
     if (h) {
       const acceptedEncodings = h
         .split(",")
-        .map((s:any) => s.trim().toLowerCase().toString());
+        .map((s) => s.trim().toLowerCase().toString());
       if (
         acceptedEncodings.includes("gzip") ||
         acceptedEncodings.includes("deflate")

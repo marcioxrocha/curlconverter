@@ -86,15 +86,45 @@ const converters = {
     extension: ".java",
     converter: curlconverter.toJava,
   },
+  "java-httpurlconnection": {
+    name: "Java + HttpUrlConnection",
+    extension: ".java",
+    converter: curlconverter.toJavaHttpUrlConnection,
+  },
+  "java-jsoup": {
+    name: "Java + jsoup",
+    extension: ".java",
+    converter: curlconverter.toJavaJsoup,
+  },
+  "java-okhttp": {
+    name: "Java + OkHttp",
+    extension: ".java",
+    converter: curlconverter.toJavaOkHttp,
+  },
   javascript: {
     name: "JavaScript",
     extension: ".js",
     converter: curlconverter.toJavaScript,
   },
+  "javascript-jquery": {
+    name: "JavaScript + jQuery",
+    extension: ".js",
+    converter: curlconverter.toJavaScriptJquery,
+  },
+  "javascript-xhr": {
+    name: "JavaScript + XHR",
+    extension: ".js",
+    converter: curlconverter.toJavaScriptXHR,
+  },
   json: {
     name: "Json",
     extension: ".json",
     converter: curlconverter.toJsonString,
+  },
+  kotlin: {
+    name: "Kotlin",
+    extension: ".kt",
+    converter: curlconverter.toKotlin,
   },
   matlab: {
     name: "MATLAB",
@@ -116,10 +146,20 @@ const converters = {
     extension: ".js",
     converter: curlconverter.toNodeGot,
   },
+  "node-http": {
+    name: "Node + http",
+    extension: ".js",
+    converter: curlconverter.toNodeHttp,
+  },
   "node-request": {
     name: "Node + request",
     extension: ".js",
     converter: curlconverter.toNodeRequest,
+  },
+  "node-superagent": {
+    name: "Node + SuperAgent",
+    extension: ".js",
+    converter: curlconverter.toNodeSuperAgent,
   },
   php: {
     name: "PHP",
@@ -130,6 +170,11 @@ const converters = {
     name: "PHP + Guzzle",
     extension: ".php",
     converter: curlconverter.toPhpGuzzle,
+  },
+  powershell: {
+    name: "PowerShell",
+    extension: ".ps1",
+    converter: curlconverter.toPowershellRestMethod,
   },
   python: {
     name: "Python",
@@ -150,6 +195,11 @@ const converters = {
     name: "Rust",
     extension: ".rs",
     converter: curlconverter.toRust,
+  },
+  swift: {
+    name: "Swift",
+    extension: ".swift",
+    converter: curlconverter.toSwift,
   },
   wget: {
     name: "Wget",

@@ -32,7 +32,7 @@ export interface ShortOpts {
 
 // prettier-ignore
 export const curlLongOpts = {
-  // BEGIN GENERATED LONG OPTIONS
+  // BEGIN EXTRACTED OPTIONS
   "url": { type: "string", name: "url" },
   "dns-ipv4-addr": { type: "string", name: "dns-ipv4-addr" },
   "dns-ipv6-addr": { type: "string", name: "dns-ipv6-addr" },
@@ -209,6 +209,8 @@ export const curlLongOpts = {
   "http3-only": { type: "bool", name: "http3-only" },
   "http0.9": { type: "bool", name: "http0.9" },
   "no-http0.9": { type: "bool", name: "http0.9", expand: false },
+  "proxy-http2": { type: "bool", name: "proxy-http2" },
+  "no-proxy-http2": { type: "bool", name: "proxy-http2", expand: false },
   "tlsv1": { type: "bool", name: "tlsv1" },
   "tlsv1.0": { type: "bool", name: "tlsv1.0" },
   "tlsv1.1": { type: "bool", name: "tlsv1.1" },
@@ -397,7 +399,7 @@ export const curlLongOpts = {
   "progress-meter": { type: "bool", name: "progress-meter" },
   "no-progress-meter": { type: "bool", name: "progress-meter", expand: false },
   "next": { type: "bool", name: "next" },
-  // END GENERATED LONG OPTIONS
+  // END EXTRACTED OPTIONS
 
 
   // These are options that curl used to have.
@@ -534,7 +536,7 @@ export function toBoolean(opt: string): boolean {
 export const curlShortOpts: {
   [key: string]: keyof typeof curlLongOpts
 } = {
-  // BEGIN GENERATED SHORT OPTIONS
+  // BEGIN EXTRACTED SHORT OPTIONS
   "0": "http1.0",
   "1": "tlsv1",
   "2": "sslv2",
@@ -594,7 +596,7 @@ export const curlShortOpts: {
   "Z": "parallel",
   "#": "progress-bar",
   ":": "next",
-  // END GENERATED SHORT OPTIONS
+  // END EXTRACTED SHORT OPTIONS
 } as const;
 
 export const changedShortOpts: ShortOpts = {
