@@ -8,6 +8,7 @@
     "target": "es2018",
     "lib": ["es2018", "dom"],
     "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types", "types"],
     "module": "es2022",
     "esModuleInterop": true,
     "strictNullChecks": true,

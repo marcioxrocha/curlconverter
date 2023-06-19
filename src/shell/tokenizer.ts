@@ -271,12 +271,12 @@ function warnAboutErrorNodes(
         // https://github.com/tree-sitter/tree-sitter/issues/2195
         currentNode = (
           cursor.currentNode as unknown as () => Parser.SyntaxNode
-        )();
+        )() as any;
       } catch {}
       warnings.push([
         "bash",
         `Bash parsing error on line ${cursor.startPosition.row + 1}:\n` +
-          underlineNode(currentNode, curlCommand),
+          underlineNode(currentNode as any, curlCommand),
       ]);
       break;
     }

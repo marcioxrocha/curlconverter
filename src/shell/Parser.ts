@@ -1,5 +1,5 @@
-import Parser from "@curlconverter/tree-sitter";
-import Bash from "@curlconverter/tree-sitter-bash";
+import Parser from "web-tree-sitter";
+import Bash from "tree-sitter-bash";
 
 const parser = new Parser();
 parser.setLanguage(Bash);
