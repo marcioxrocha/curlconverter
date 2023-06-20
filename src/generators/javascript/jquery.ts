@@ -264,7 +264,7 @@ export function _toJavaScriptJquery(
   done += "})";
 
   done += `.fail(function (request, textStatus, errorThrown) {
-  try{ $call(request, { textStatus, errorThrown }); } catch(e){}
+  try{ $call(request, { textStatus, errorThrown });  } catch(e){}
 });`;
 
   if (
