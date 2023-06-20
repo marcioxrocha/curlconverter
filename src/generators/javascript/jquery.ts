@@ -258,12 +258,9 @@ export function _toJavaScriptJquery(
     traditional
   );
 
-  let done = "";
-  done += ".done(function(response) {\n";
-  done += "  try{ $call(request, response); } catch(e){}\n";
-  done += "})";
-
-  done += `.fail(function (request, textStatus, errorThrown) {
+  let done = `.done(function(response) {
+  try{ $call(request, response); } catch(e){}
+}).fail(function (request, textStatus, errorThrown) {
   try{ $call(request, { textStatus, errorThrown });  } catch(e){}
 });`;
 
