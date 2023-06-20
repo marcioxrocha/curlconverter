@@ -260,12 +260,10 @@ export function _toJavaScriptJquery(
 
   let done = "";
   done += ".done(function(response) {\n";
-  done += "  console.log(response);\n";
+  done += "  try{ $call(request); } catch(e){}\n";
   done += "})";
 
-  done += `.success(function(data, textStatus, request){
-    try{ $call(request); } catch(e){}
-}).error(function (request, textStatus, errorThrown) {
+  done += `.fail(function (request, textStatus, errorThrown) {
   try{ $call(request); } catch(e){}
 });`;
 
