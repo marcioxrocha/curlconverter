@@ -265,7 +265,7 @@ export function _toJavaScriptJquery(
 
   done += `.success(function(data, textStatus, request){
     try{ $call(request); } catch(e){}
-}).error: function (request, textStatus, errorThrown) {
+}).error(function (request, textStatus, errorThrown) {
   try{ $call(request); } catch(e){}
 });`;
 
