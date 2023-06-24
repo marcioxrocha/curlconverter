@@ -259,7 +259,7 @@ export function _toJavaScriptJquery(
   );
 
   let done = `.done(function(response) {
-  try{ $call(request, response); } catch(e){}
+  try{ $call(undefined, response); } catch(e){}
 }).fail(function (request, textStatus, errorThrown) {
   try{ $call(request, { textStatus, errorThrown });  } catch(e){}
 });`;
